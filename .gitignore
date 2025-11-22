@@ -1,0 +1,38 @@
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Data files (uncomment if you don't want to commit data files)
+# *.csv
+# *.json
+# data/
+# output/
+
+# Keep these specific data files ignored
+gdelt_data.json
+gdelt_data.csv
+gdelt_data_cleaned.json
+gdelt_data_cleaned.csv
+cryptopanic_data.json
+cryptopanic_data.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+

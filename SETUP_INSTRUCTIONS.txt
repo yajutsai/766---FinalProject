@@ -1,0 +1,37 @@
+快速設定指南 - GDELT 資料擷取
+==========================================
+
+1. 安裝依賴套件:
+   pip install -r requirements.txt
+
+2. 執行腳本 (不需要 API key!):
+   python fetch_gdelt_data.py
+
+3. 輸出檔案:
+   - gdelt_data.json (原始 JSON 資料)
+   - gdelt_data.csv (處理過的 CSV 資料，已移除重複)
+
+配置說明:
+----------
+腳本會自動:
+- 將日期範圍分割成每月區塊來避免 API 限制
+- 過濾不相關的文章（只保留加密貨幣相關內容）
+- 移除重複文章（基於 URL）
+- 匯出為 JSON 和 CSV 格式
+
+預設設定:
+- 日期範圍: 2024/11/1 - 2025/11/1
+- 關鍵詞: bitcoin, btc, ethereum, eth, cryptocurrency, crypto, blockchain, digital currency
+
+修改設定:
+編輯 fetch_gdelt_data.py 中的變數:
+- START_DATE: 開始日期
+- END_DATE: 結束日期
+- KEYWORDS: 關鍵詞列表
+
+注意事項:
+----------
+- GDELT API 是免費的，不需要 API key
+- 每次請求最多返回 250 篇文章
+- 腳本會自動處理分頁和日期範圍分割
+- 資料會自動過濾，只保留相關的加密貨幣新聞

@@ -4,12 +4,20 @@
 1. 安裝依賴套件:
    pip install -r requirements.txt
 
-2. 執行腳本 (不需要 API key!):
+2. 進入新聞資料夾:
+   cd news_collection
+
+3. 執行腳本 (不需要 API key!):
    python fetch_gdelt_data.py
 
-3. 輸出檔案:
+4. 清洗資料:
+   python clean_gdelt_data.py
+
+5. 輸出檔案 (在 news_collection 資料夾中):
    - gdelt_data.json (原始 JSON 資料)
    - gdelt_data.csv (處理過的 CSV 資料，已移除重複)
+   - gdelt_data_cleaned.json (清洗後的 JSON 資料)
+   - gdelt_data_cleaned.csv (清洗後的 CSV 資料)
 
 配置說明:
 ----------
@@ -24,7 +32,7 @@
 - 關鍵詞: bitcoin, btc, ethereum, eth, cryptocurrency, crypto, blockchain, digital currency
 
 修改設定:
-編輯 fetch_gdelt_data.py 中的變數:
+編輯 news_collection/fetch_gdelt_data.py 中的變數:
 - START_DATE: 開始日期
 - END_DATE: 結束日期
 - KEYWORDS: 關鍵詞列表
